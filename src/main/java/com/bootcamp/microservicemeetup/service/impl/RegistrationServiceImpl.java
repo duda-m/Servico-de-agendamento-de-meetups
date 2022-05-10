@@ -14,12 +14,11 @@ public class RegistrationServiceImpl implements RegistrationService {
 
     RegistrationRepository repository;
 
-    /*public RegistrationServiceImpl(RegistrationRepository registrationRepository) {
-        this.repository = registrationRepository;
-    }*/
+
     public RegistrationServiceImpl(RegistrationRepository repository) {
         this.repository = repository;
     }
+
 
     public Registration save(Registration registration) {
         if(repository.existsByRegistration(registration.getRegistration())){
